@@ -235,7 +235,7 @@ module.exports = async (req, res) => {
                   line-height: 25px;
                 ">
                             <p style="text-align: center;">
-                                Hey ${req.body.fullname} 👋🏽,
+                                Hey ${req.body.email} 👋🏽,
                                 <br>
                                 <br>
                                 we are delighted to have you on our waiting list
@@ -362,7 +362,6 @@ module.exports = async (req, res) => {
     //create a new email
     const email = new Email({
       email: req.body.email,
-      fullname: req.body.fullname,
     });
     //save the new user to the database
     const savedEmail = await email.save();
